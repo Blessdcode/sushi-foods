@@ -1,13 +1,550 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui;
+  scroll-behavior: smooth
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.logo {
+  cursor: pointer;
+}
+
+.cart-menu {
+  position: relative !important
+}
+
+.cart-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding-top: 2rem;
+}
+
+.top-cart {
+  margin-top: 3rem
+}
+
+.cart-box .cart-det {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* margin: 1rem */
+}
+
+.cart-box .cart-det .cart-det-box {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.7rem;
+  border-radius: 10px;
+  background-color: #f1d5bb;
+  position: relative;
+}
+
+.cart-box .cart-det .cart-det-box .cart-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cart-box .cart-det .cart-det-box .food-name h4 {
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 31px
+}
+
+.cart-box .cart-det .cart-det-box .food-name p {
+  font-weight: 400;
+  font-size: .99rem;
+  line-height: 25px
+}
+
+.increment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column
+}
+
+.increment input {
+  width: 56px;
+  height: 35px;
+  background: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.increment button {
+  width: 30px;
+}
+
+.increment .plus {
+  margin-bottom: 5px;
+}
+
+.increment .minus {
+  margin-top: 5px;
+}
+
+.total-amount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.total {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.continue,
+.checkout {
+  width: 150px;
+  height: 50px;
+  background-color: rgb(19, 19, 19);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+  cursor: pointer;
+
+}
+
+.total::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #f1d5bb;
+  position: absolute;
+  bottom: -10px
+}
+
+.cart-box .total span {
+  color: #0c0b0b
+}
+
+.cart-box {
+  padding: 4rem 0 !important
+}
+
+.checkout-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.checkout-page .icon {
+  color: rgb(2, 131, 45);
+}
+
+.checkout-page h3 {
+  font-size: 2rem;
+  margin: 12px 0;
+  ;
+}
+
+.checkout-page p {
+  text-align: center;
+}
+
+/* Home Page */
+.hero-page {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+  overflow: hidden
+}
+
+.hero-page .lead {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 45px;
+  text-transform: capitalize;
+  z-index: 10;
+}
+
+.hero-page .lead span {
+  font-weight: 600;
+  color: #f1d5bb
+}
+
+.hero-page .home_img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+.hero-page p {
+  min-width: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  text-align: center;
+  z-index: 30;
+  position: relative;
+  padding: 1rem;
+}
+
+.hero-page .effect {
+  padding: 1.4rem
+}
+
+.hero-page .effect span:nth-child(1) {
+  border-top: 10px solid #f1d5bb;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: anime1 2s linear infinite
+}
+
+.hero-page .effect span:nth-child(2) {
+  border-left: 6px solid #f1d5bb;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: anime2 2s linear infinite
+}
+
+.hero-page .effect span:nth-child(3) {
+  border-right: 6px solid #f1d5bb;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: anime3 2s linear infinite
+}
+
+.hero-page .effect span:nth-child(4) {
+  border-bottom: 6px solid #f1d5bb;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: anime4 2s linear infinite
+}
+
+@media screen and (min-width: 768px) {
+  .hero-page .lead {
+    font-size: 3.5rem;
+    line-height: 75px;
+  }
+
+  .hero-page p {
+    min-width: 70px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center
+  }
+
+}
+
+
+
+.menu-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: #0c0b0b;
+  position: fixed;
+  width: 100%;
+  z-index: 456
+}
+
+.menu-bar .logo .arrow {
+  filter: invert(2);
+  width: 41px;
+  height: 41px
+}
+
+.menu-bar h1 {
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: solid 2px #f1d5bb
+}
+
+.menu-bar a {
+  color: #fff;
+}
+
+.menu-bar h3 {
+  color: #fff;
+  font-size: 32px;
+  text-transform: uppercase;
+  border-bottom: solid 2px #f1d5bb
+}
+
+.menu-bar .cart {
+  position: relative
+}
+
+.cart .sumproducts {
+  color: #0c0b0b;
+  background-color: #f1d5bb;
+  position: absolute;
+  right: 0;
+  top: -10px;
+  transform: translate(10px);
+  font-size: 18px;
+  padding: 3px;
+  z-index: 5;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+.menu-bar .cart span {
+  background-color: #fff;
+  width: 1.678rem;
+  height: 1.67rem;
+  position: absolute;
+  top: -10px;
+  left: 18px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #070707
+}
+
+.menu-bar .cart a {
+  color: #fff;
+}
+
+.sushi-foods {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 8rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+}
+
+.sushi-foods .foods-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  place-items: center;
+  position: relative;
+  gap: 20px;
+
+
+}
+
+.sushi-foods .foods-cards .foods-card {
+  height: 319px;
+  /* width: 324px; */
+  position: relative;
+  transition: .5s ease-in-out;
+  overflow: hidden
+}
+
+.sushi-foods .foods-cards .foods-card img {
+  width: 224px;
+  height: 285px;
+  border-radius: 5px 5px 0px 0px;
+  position: relative;
+  transition: transform 1s ease-in-out
+}
+
+.sushi-foods .foods-cards .foods-card img:hover {
+  transform: translateY(-4px);
+  transform: scale(1.2);
+  background: #fff
+}
+
+.sushi-foods .foods-cards .foods-card small {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background: #f1d5bb;
+  padding: .666rem;
+  font-size: 18px;
+  z-index: 2;
+  font-weight: 600;
+  border-radius: 0 4px 12px 0
+}
+
+.sushi-foods .foods-cards .foods-card .food-details {
+  position: absolute;
+  bottom: 0;
+  width: 224px;
+  height: 45px;
+  background: #0c0b0b;
+  border-radius: 0px 0px 5px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  padding: .5rem
+}
+
+.sushi-foods .foods-cards .foods-card .food-details .det h4 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #f1d5bb;
+  text-transform: capitalize
+}
+
+.sushi-foods .foods-cards .foods-card .food-details .to-cart {
+  width: 88px;
+  height: 32px;
+  background: #f1d5bb;
+  border-radius: 26px;
+  text-align: center;
+  color: #0c0b0b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer
+}
+
+.sushi-foods .foods-cards .foods-card .food-details .to-cart p {
+  font-size: 14px;
+  font-weight: 500
+}
+
+.sushi-foods .foods-cards .foods-card .food-details .to-cart:hover {
+  background: #fff
+}
+
+.buttons {
+  position: relative;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  color: #0c0b0b;
+  display: inline-block
+}
+
+.buttons .btn2 {
+  border-radius: 2px;
+  background-color: #fff;
+  padding: .6rem 1.76rem;
+  text-decoration: none;
+  color: #0c0b0b;
+  display: inline-block;
+  margin: 0 .4rem;
+  transition: .5s ease-in-out;
+  border: 1px solid #fff
+}
+
+.buttons .btn2:hover {
+  background-color: #0c0b0b;
+  color: #f1d5bb;
+  box-shadow: 2px 4px 15px rgba(241, 213, 187, .6)
+}
+
+.buttons .btn1 {
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #fff;
+  padding: .6rem 1.76rem;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  margin: 0 .4rem;
+  transition: .5s ease-in-out
+}
+
+.buttons .btn1:hover {
+  background-color: #0c0b0b;
+  color: #f1d5bb;
+  box-shadow: 2px 4px 15px rgba(241, 213, 187, .6)
+}
+
+@keyframes anime1 {
+  0% {
+    transform: translateX(-100%)
+  }
+
+  100% {
+    transform: translateX(100%)
+  }
+}
+
+@keyframes anime2 {
+  0% {
+    transform: translateY(100%)
+  }
+
+  100% {
+    transform: translateY(-100%)
+  }
+}
+
+@keyframes anime3 {
+  0% {
+    transform: translateY(-100%)
+  }
+
+  100% {
+    transform: translateY(100%)
+  }
+}
+
+@keyframes anime4 {
+  0% {
+    transform: translateX(100%)
+  }
+
+  100% {
+    transform: translateX(-100%)
+  }
+}
+
+#about {
+  width: 700px;
+  margin: 0 auto;
+  padding: 7rem
+}
+
+#about h2 {
+  color: #f1d5bb;
+  font-size: 2rem;
+  line-height: 3.1rem
+}
+
+.cart-box {
+  padding: 4rem 0 0 4rem
+}
+
+.cart-box h2 {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 63px
 }
