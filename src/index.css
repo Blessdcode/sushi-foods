@@ -72,6 +72,9 @@
   justify-content: center;
   flex-direction: column
 }
+.det{
+  text-transform: capitalize;
+}
 
 .increment input {
   width: 56px;
@@ -120,7 +123,20 @@
   border-radius: 8px;
   margin: 10px;
   cursor: pointer;
+}
 
+.load-more-button{
+  width: 150px;
+  height: 50px;
+  background-color: rgb(19, 19, 19);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin: 40px auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .total::before {

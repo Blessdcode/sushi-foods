@@ -5,8 +5,13 @@ import { ShopContext } from '../context/shopContext'
 const Product = (props) => {
     const { id, foodName, foodImage, price } = props.data
 
-    const { addToCart, cartItems } = useContext(ShopContext)
-  const cartItemsAmount = cartItems[id]
+    const { addToCart } = useContext(ShopContext)
+    const navigate = useNavigate()
+
+    const handlerToCart = () => {
+        addToCart(id)
+        window.alert(`${foodName} as been added to cart!!!`)
+    }
 
 
 
@@ -22,11 +27,11 @@ const Product = (props) => {
                     {/* <div class="to-cart" >
                         <p>Add to cart</p>
                     </div> */}
-                    
-                        <button className='to-cart' onClick={() => addToCart(id) }>
-                            Add to cart 
-                        </button>
-                    
+
+                    <button className='to-cart' onClick={handlerToCart}>
+                        Add to cart
+                    </button>
+
                 </div>
 
 

@@ -30,10 +30,7 @@ export const CartItem = (props) => {
 
                 </div>
 
-                {/* <div className="total">
-                    <h1>Total: <span className="amount">$600</span></h1>
-                </div>
-                <button className="checkout hidden">checkout</button> */}
+               
             </div>
 
 

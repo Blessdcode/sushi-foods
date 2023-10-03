@@ -9,6 +9,15 @@ import food_6 from './food_6.png'
 import food_7 from './food_7.png'
 import food_8 from './food_8.png'
 import food_9 from './food_9.png'
+import food_10 from './food_10.jpg'
+import food_11 from './food_11.jpg'
+import food_12 from './food_12.jpg'
+import food_13 from './food_13.jpg'
+import food_14 from './food_14.jpg'
+import food_15 from './food_15.jpg'
+import food_16 from './food_16.jpg'
+import food_17 from './food_17.jpg'
+import food_18 from './food_18.jpg'
 
 
 export {
@@ -23,4 +32,13 @@ export {
     food_7,
     food_8,
     food_9,
+    food_10,
+    food_11,
+    food_12,
+    food_13,
+    food_14,
+    food_15,
+    food_16,
+    food_17,
+    food_18
 }
