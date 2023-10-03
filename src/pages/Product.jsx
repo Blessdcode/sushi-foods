@@ -6,7 +6,6 @@ const Product = (props) => {
     const { id, foodName, foodImage, price } = props.data
 
     const { addToCart } = useContext(ShopContext)
-    const navigate = useNavigate()
 
     const handlerToCart = () => {
         addToCart(id)
