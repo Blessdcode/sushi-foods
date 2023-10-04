@@ -4,11 +4,20 @@ import { FOOD } from '../Food';
 import Product from './Product';
 
 const Menu = () => {
-  const [visibleProducts, setVisibleProducts] = useState(6); // Number of products to initially display
+  const initialVisibleProducts = 6; // Number of products to initially display
+  const [visibleProducts, setVisibleProducts] = useState(initialVisibleProducts);
+  const [hiddenProducts, setHiddenProducts] = useState(FOOD.length - initialVisibleProducts);
 
   const loadMoreProducts = () => {
     // Increase the number of products to display
     setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 6); // Increase by 6 or any desired number
+    setHiddenProducts((prevHiddenProducts) => prevHiddenProducts - 6);
+  };
+
+  const showLessProducts = () => {
+   // Reset the number of products to the initial value
+   setVisibleProducts(initialVisibleProducts);
+    setHiddenProducts((prevHiddenProducts) => prevHiddenProducts + 6);
   };
 
   return (
@@ -22,9 +31,14 @@ const Menu = () => {
           ))}
         </div>
 
-        {visibleProducts < FOOD.length && (
+        {hiddenProducts === 0 && (
+          <button onClick={showLessProducts} className='load-more-button'>
+            Show Less
+          </button>
+        )}
+        {hiddenProducts > 0 && (
           <button onClick={loadMoreProducts} className='load-more-button'>
-            Load More
+            Show More
           </button>
         )}
       </div>
