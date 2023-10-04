@@ -1,4 +1,8 @@
 import restaurant from './restaurant.png'
+import restaurant_1 from './restaurant_1.jpg'
+import restaurant_2 from './restaurant_2.jpg'
+import restaurant_3 from './restaurant_3.jpg'
+import restaurant_4 from './restaurant_4.jpg'
 import logo from './logo.svg'
 import food_1 from './food_1.jpg'
 import food_2 from './food_2.png'
@@ -22,6 +26,10 @@ import food_18 from './food_18.jpg'
 
 export {
     restaurant,
+    restaurant_1,
+    restaurant_2,
+    restaurant_3,
+    restaurant_4,
     logo,
     food_1,
     food_2,

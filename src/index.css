@@ -72,7 +72,8 @@
   justify-content: center;
   flex-direction: column
 }
-.det{
+
+.det {
   text-transform: capitalize;
 }
 
@@ -125,7 +126,7 @@
   cursor: pointer;
 }
 
-.load-more-button{
+.load-more-button {
   width: 150px;
   height: 50px;
   background-color: rgb(19, 19, 19);
@@ -208,14 +209,33 @@
   color: #f1d5bb
 }
 
-.hero-page .home_img {
+.title{
   position: absolute;
+}
+
+
+
+.slider {
+  width: 100%;
+  margin: 0 auto;
+  z-index: -1;
+  position: absolute;
+}
+
+.slider div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.home_img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  z-index: -1;
 }
+
 
 .hero-page p {
   min-width: 40px;

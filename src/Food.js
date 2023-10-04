@@ -1,5 +1,5 @@
 import {
-    food_1, food_2, food_3, food_4, food_5, food_6, food_7, food_8, food_9, food_10, food_11, food_12, food_13, food_14, food_15, food_16, food_17, food_18
+    food_1, food_2, food_3, food_4, food_5, food_6, food_7, food_8, food_9, food_10, food_11, food_12, food_13, food_14, food_15, food_16, food_17, food_18, restaurant, restaurant_1, restaurant_2, restaurant_3,restaurant_4
 } from './assets'
 
 
@@ -111,5 +111,28 @@ export const FOOD = [
         foodName: 'Topped cake',
         foodImage: food_18,
         price: 450.00,
+    },
+]
+
+export const homeBg = [
+    {
+        id: 1,
+        img: restaurant
+    },
+    {
+        id: 2,
+        img: restaurant_1
+    },
+    {
+        id: 3,
+        img: restaurant_2
+    },
+    {
+        id: 4,
+        img: restaurant_3
+    },
+    {
+        id: 5,
+        img: restaurant_4
     },
 ]
