@@ -23,7 +23,7 @@ const Cart = () => {
 
   return (
     <div>
-      <Bar />
+      <Bar name="Cart Items"/>
       <div className="cart-box">
         {FOOD.map((product) => {
           if (cartItems[product.id] !== 0) {

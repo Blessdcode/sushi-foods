@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../components/navbar';
 import { FOOD } from '../Food';
 import Product from './Product';
+// import Details from './det';
 
 const Menu = () => {
   const initialVisibleProducts = 6; // Number of products to initially display
@@ -15,8 +16,8 @@ const Menu = () => {
   };
 
   const showLessProducts = () => {
-   // Reset the number of products to the initial value
-   setVisibleProducts(initialVisibleProducts);
+    // Reset the number of products to the initial value
+    setVisibleProducts(initialVisibleProducts);
     setHiddenProducts((prevHiddenProducts) => prevHiddenProducts + 6);
   };
 
@@ -27,7 +28,9 @@ const Menu = () => {
       <div className='sushi-foods'>
         <div className='foods-cards'>
           {FOOD.slice(0, visibleProducts).map((food) => (
-            <Product key={food.id} data={food} />
+            <>
+              <Product key={food.id} data={food} />
+            </>
           ))}
         </div>
 

@@ -1,7 +1,5 @@
 import React, { createContext, useState } from 'react'
 import { FOOD } from '../Food'
-import Navbar from '../components/navbar'
-import Product from '../pages/Product'
 import { useEffect } from 'react'
 
 
@@ -22,7 +20,7 @@ export const ShopContextProvider = (props) => {
         localStorage.setItem('cart', JSON.stringify(cartData));
     };
 
-    // Add to cart 
+    // Add to cart      
     // const addToCart = (itemsId) => {
     //     setCartItems((prev) => ({ ...prev, [itemsId]: prev[itemsId] + 1 }))
     // }

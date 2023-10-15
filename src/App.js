@@ -4,6 +4,7 @@ import Menu from './pages/menu'
 import Cart from './pages/cart'
 import Checkout from "./pages/Checkout";
 import { ShopContextProvider } from "./context/shopContext";
+// import Details from "./pages/det";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
             <Route path="/menu" element={<Menu />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
+            {/* <Route path="/details" element={<Details />} /> */}
           </Routes>
         </Router>
       </ShopContextProvider>

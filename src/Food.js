@@ -56,7 +56,7 @@ export const FOOD = [
         id: 9,
         foodName: 'Beef burger',
         foodImage: food_9,
-        price: 400.60,
+        price: 80.60,
     },
     {
         id: 10,
@@ -68,7 +68,7 @@ export const FOOD = [
         id: 11,
         foodName: 'Beef potato',
         foodImage: food_11,
-        price: 310.00,
+        price: 110.00,
     },
     {
         id: 12,
@@ -98,19 +98,19 @@ export const FOOD = [
         id: 16,
         foodName: 'Pumpkin cream soup',
         foodImage: food_16,
-        price: 400.00,
+        price: 100.00,
     },
     {
         id: 17,
         foodName: 'Capellini tomato sauce',
         foodImage: food_17,
-        price: 1408.50,
+        price: 148.50,
     },
     {
         id: 18,
         foodName: 'Topped cake',
         foodImage: food_18,
-        price: 450.00,
+        price: 150.00,
     },
 ]
 

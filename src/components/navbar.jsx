@@ -33,13 +33,14 @@ const Navbar = (props) => {
   )
 }
 
-export const Bar = () => {
+export const Bar = (props) => {
   return (
     <div class="menu-bar">
 
       <Link to='/menu'><ArrowLeft size={42} /></Link>
       <div class="cart">
-        <h3>Cart Items</h3>
+        <h3>{props.name}</h3>
+        <h3>{props.title}</h3>
 
       </div>
     </div>
