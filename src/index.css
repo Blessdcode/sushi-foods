@@ -585,3 +585,39 @@
   font-size: 50px;
   line-height: 63px
 }
+
+.not_found{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
+}
+
+.not_found h3{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  font-size: 32px;
+  transform: translate(-50%,-50%);
+}
+
+.not_found img{
+  width: 550px;
+  /* background-color: #070707; */
+}
+
+.not_found .home{
+}
+
+.not_found .flex{
+  display: inline-flex;
+  position: absolute;
+  bottom: 15%;
+  cursor: pointer;
+  align-items: center;
+}

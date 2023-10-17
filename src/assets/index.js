@@ -22,6 +22,8 @@ import food_15 from './food_15.jpg'
 import food_16 from './food_16.jpg'
 import food_17 from './food_17.jpg'
 import food_18 from './food_18.jpg'
+import not_found_1 from './not_found_1.svg'
+import not_found_2 from './not_found_2.svg'
 
 
 export {
@@ -48,5 +50,7 @@ export {
     food_15,
     food_16,
     food_17,
-    food_18
+    food_18,
+    not_found_1,
+    not_found_2,
 }
