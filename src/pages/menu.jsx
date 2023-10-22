@@ -11,14 +11,14 @@ const Menu = () => {
 
   const loadMoreProducts = () => {
     // Increase the number of products to display
-    setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 6); // Increase by 6 or any desired number
-    setHiddenProducts((prevHiddenProducts) => prevHiddenProducts - 6);
+    setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 3); // Increase by 6 or any desired number
+    setHiddenProducts((prevHiddenProducts) => prevHiddenProducts - 3);
   };
 
   const showLessProducts = () => {
     // Reset the number of products to the initial value
     setVisibleProducts(initialVisibleProducts);
-    setHiddenProducts((prevHiddenProducts) => prevHiddenProducts + 6);
+    setHiddenProducts((prevHiddenProducts) => prevHiddenProducts - 3);
   };
 
   return (
@@ -34,11 +34,11 @@ const Menu = () => {
           ))}
         </div>
 
-        {hiddenProducts === 0 && (
+        {/* {hiddenProducts === 0 && (
           <button onClick={showLessProducts} className='load-more-button'>
             Show Less
           </button>
-        )}
+        )} */}
         {hiddenProducts > 0 && (
           <button onClick={loadMoreProducts} className='load-more-button'>
             Show More
