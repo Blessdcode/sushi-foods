@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { ShopContext } from '../context/shopContext'
 
 
-
 export const CartItem = (props) => {
     const { cartItems, addToCart, removeCart, updateCartItem, getTotalAmount } = useContext(ShopContext)
     const { id, price, foodImage, foodName } = props.data
@@ -11,6 +10,7 @@ export const CartItem = (props) => {
 
     return (
         <div>
+            
             <div className='top-cart' >
                 <div className="cart-det">
                     <div class="cart-det-box">

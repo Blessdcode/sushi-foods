@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../components/navbar';
 import { FOOD } from '../Food';
 import Product from './Product';
@@ -21,6 +21,29 @@ const Menu = () => {
     setHiddenProducts((prevHiddenProducts) => prevHiddenProducts - 3);
   };
 
+  // const [popular, setPopular] = useState([])
+
+  // useEffect(() => {
+  //   getPopular()
+  // }, [])
+
+  // const getPopular = async () => {
+
+  //   const check = sessionStorage.getItem("popular")
+
+  //   if (check) {
+  //     setPopular(JSON.parse(check))
+  //   } else {
+  //     const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=25`)
+
+  //     const data = await api.json()
+
+  //     sessionStorage.setItem("popular", JSON.stringify(data.recipes))
+  //     setPopular(data.recipes)
+  //     console.log(data);
+  //   }
+
+
   return (
     <>
       <Navbar />
@@ -32,6 +55,15 @@ const Menu = () => {
               <Product key={food.id} data={food} />
             </>
           ))}
+          {/* {popular.map((food) => {
+              return (
+                <>
+                  <Product key={food.id} data={food} />
+
+                </>
+              )
+            })} */}
+
         </div>
 
         {/* {hiddenProducts === 0 && (
